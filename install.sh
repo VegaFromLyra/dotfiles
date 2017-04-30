@@ -8,7 +8,7 @@ DOTFILES_DIR="$(cd "$(dirname "$0")"; pwd -P)"
 echo "Dotfiles: $DOTFILES_DIR"
 
 # Update dotfiles itself first
-#[ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
+[ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
 # Set up symlinks
 ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
