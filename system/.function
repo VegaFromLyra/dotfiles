@@ -1,0 +1,5 @@
+function namespace_console() {
+  my_namespace="$1"
+    monolith_pod=$(kubectl get pods --namespace $my_namespace | grep monolith | cut -d ' ' -f 1)
+    kubectl exec -it $monolith_pod --namespace $my_namespace -- bash -c "while :; do sleep 59; echo -n ' ' >&2; done & rails c"
+}

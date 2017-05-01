@@ -3,3 +3,59 @@ alias gs="git status"
 alias gco="git checkout"
 alias gcm="git commit -m"
 alias ww="cd /Users/ashab/repos/projects/what_to_watch"
+
+alias gco='git checkout'
+alias gs='git status'
+alias ga='git add'
+alias gp='git pull'
+alias gb='git branch'
+alias gpu='git push'
+alias gl='git log --oneline'
+alias gcm='git commit -m'
+alias clean_branches="git branch -vv | grep ': gone]' | cut -d' ' -f3 | xargs git branch -d"
+
+alias rails_start='bundle exec rails s'
+alias sidekiq_start='bundle exec sidekiq'
+alias migrate_s='bundle exec rake db:migrate:status'
+alias migrate='bundle exec rake db:migrate'
+alias migrate_t='bundle exec rake test:prepare'
+alias rc='bundle exec rails c'
+
+alias login_ecr="`aws ecr get-login`"
+alias dc="docker-compose"
+alias d-pb="dc run backend protoc --proto_path=lib/protocol_buffers --ruby_out=app/protocol_buffers lib/protocol_buffers/*/*/*.proto"
+alias d-irb="dc run backend bundle exec irb -r ./app.rb"
+alias d-console="dc run backend bundle exec rails c"
+alias d-migrate="dc run backend bundle exec rake db:migrate"
+alias d-seed="dc run backend bundle exec rake db:seed"
+alias d-bundle="dc run backend bundle"
+alias d-rspec="dc run rspec"
+alias d-pull="dc pull"
+alias d-down="dc down"
+alias d-ps="dc ps"
+alias d-be="dc run backend bundle exec"
+alias d-db="dc up -d mysql; sleep 5; dc run backend bundle exec rake db:setup"
+alias d-serve="dc up -d backend" # See Service Discovery in place of NGINX
+alias d-spec="d-rspec bundle exec rspec"
+alias d-setup="d-login; d-pull; d-db; d-pb; d-serve; d-rspec"
+alias d-up="d-login; d-db; d-serve; d-rspec"
+alias d-update="git checkout master; git pull origin master; d-bundle; d-migrate; git branch"
+alias d-backend="docker-compose up -d backend"
+alias sql_port="docker-compose port mysql 3306"
+
+alias p-jump="ssh p-jumpbox.hbinternal.com"
+alias r-jump="ssh r-jumpbox.hbinternal.com"
+
+alias ios_cons="open ~/development/repos/ios-consumer/iosv3.xcworkspace"
+alias ios_pro="open ~/development/repos/ios-provider/HandyPortal.xcworkspace" 
+alias gem_logger="cd ~/development/repos/gem-logger"
+alias hb="cd ~/development/repos/handybook"
+alias acc="cd ~/development/repos/service-accounting-kafka" 
+alias proto="cd ~/development/repos/service-monolith-protocolbuffers" 
+alias gsu="git submodule update"
+
+alias prod_console="dc -f docker-compose.production.yml run backend bundle exec irb -r ./app.rb"
+alias prod_seed="dc -f docker-compose.production.yml run backend bundle exec rake db:seed"
+alias prod_pull="dc -f docker-compose.production.yml pull"
+
+alias qa_pull="dc -f docker-compose.qa.yml pull"
