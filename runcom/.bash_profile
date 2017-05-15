@@ -5,7 +5,7 @@ else
   return
 fi
 
-for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias}; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias,function}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
