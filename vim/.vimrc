@@ -47,6 +47,8 @@ set expandtab
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+let NERDTreeShowHidden=1
+
 " Copy contents into system clipboard
 set clipboard=unnamed
 
@@ -60,9 +62,10 @@ nnoremap <C-P> :<C-U> FZF<CR>
 nnoremap <C-F> :Ack<space>
 nnoremap <silent> <Leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 nnoremap <Leader>ve :tabe $MYVIMRC<CR>
-nnoremap <Leader>vs :source $MYVIMRC<CR>CR
+nnoremap <Leader>vs :source $MYVIMRC<CR>
 nnoremap <Leader>r :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 nnoremap <Leader>bd :b#<bar>bd#<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
