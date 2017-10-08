@@ -30,8 +30,17 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+if [ -d "$HOME/.dotfiles" ]; then
+  DOTFILES_DIR="$HOME/.dotfiles"
+else
+  echo "Unable to find dotfiles, exiting."
+  return
+fi
+
 for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias,function}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
+
+#alias terms="cd ~/repos/projects/terms"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

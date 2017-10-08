@@ -21,7 +21,7 @@ alias migrate='bundle exec rake db:migrate'
 alias migrate_t='bundle exec rake test:prepare'
 alias rc='bundle exec rails c'
 
-alias login_ecr="`aws ecr get-login`"
+alias login_ecr="aws ecr get-login"
 alias dc="docker-compose"
 alias d-pb="dc run backend protoc --proto_path=lib/protocol_buffers --ruby_out=app/protocol_buffers lib/protocol_buffers/*/*/*.proto"
 alias d-irb="dc run backend bundle exec irb -r ./app.rb"
