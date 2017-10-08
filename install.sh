@@ -13,4 +13,4 @@ echo "Dotfiles: $DOTFILES_DIR"
 # Set up symlinks
 ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
-ln -sfv "$DOTFILES_DIR/runcom/.zshrc" ~ 
+ln -sfv "$DOTFILES_DIR/runcom/.zshrc" ~
