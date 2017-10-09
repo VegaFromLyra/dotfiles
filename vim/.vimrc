@@ -57,6 +57,7 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 " Show trailing whitespace:
 match ExtraWhitespace /\s\+$/
 
+
 nmap <leader>l :set list!<CR>
 nnoremap <C-P> :<C-U> FZF<CR>
 nnoremap <C-F> :Ack<space>
