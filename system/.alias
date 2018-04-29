@@ -14,6 +14,12 @@ alias gl='git log --oneline'
 alias gcm='git commit -m'
 alias clean_branches="git branch -vv | grep ': gone]' | cut -d' ' -f3 | xargs git branch -d"
 
+
+alias branch-name="!git rev-parse --abbrev-ref HEAD"
+alias publish="!git push -u origin $(git branch-name)"
+alias pr=difftool origin/master..
+
+
 alias rails_start='bundle exec rails s'
 alias sidekiq_start='bundle exec sidekiq'
 alias migrate_s='bundle exec rake db:migrate:status'
