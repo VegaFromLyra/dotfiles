@@ -83,5 +83,7 @@ Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
+Plug 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call plug#end()
