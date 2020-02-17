@@ -66,7 +66,7 @@ match ExtraWhitespace /\s\+$/
 
 
 nmap <leader>l :set list!<CR>
-nnoremap <C-P> :<C-U> FZF<CR>
+nnoremap <Leader>s :<C-U> FZF<CR>
 nnoremap <C-F> :Ack<space>
 nnoremap <silent> <Leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 nnoremap <Leader>ve :tabe $MYVIMRC<CR>
