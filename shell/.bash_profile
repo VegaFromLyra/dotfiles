@@ -20,7 +20,7 @@ parse_git_branch() {
 
 random_emoji() {
   local _emojis=(❤️i 🤯  🤓 😅 💃 😝 😰 😎 😱 ✌️  😐 😴 🙋 ⛷ )
-  local _selected_emoji=${emojis[$RANDOM % ${#emojis[@]}]};
+  local _selected_emoji=${_emojis[$RANDOM % ${#_emojis[@]}]};
   echo $_selected_emoji;
 }
 
