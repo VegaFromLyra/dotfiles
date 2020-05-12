@@ -27,6 +27,7 @@ set smartcase
 set backspace=indent,eol,start
 
 set autoindent
+set tags=.tags;
 
 set nostartofline
 
