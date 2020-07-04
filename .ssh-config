@@ -1,0 +1,15 @@
+Host gitlab.shared.handy-internal.com
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/id_handybook_rsa
+
+Host github.com-handy
+  HostName github.com
+  Preferredauthentications publickey
+  IdentityFile ~/.ssh/id_github_handy_v2
+
+Host github.com-personal
+  HostName github.com
+  User git
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
