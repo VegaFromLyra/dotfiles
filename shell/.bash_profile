@@ -28,3 +28,9 @@ export PS1="\$(random_emoji) \u \[\e[32m\]\$PWD\[\e[91m\]\$(parse_git_branch)\[\
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+<<<<<<< Updated upstream
+=======
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+>>>>>>> Stashed changes
